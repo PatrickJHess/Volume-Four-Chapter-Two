@@ -1,0 +1,78 @@
+version: 1
+project:
+  title: >-
+    "Par Yields, The Term Structure, FRED Data: Theory & Practice"
+  abstract: |
+    Par Yields from the Term Structure Reversed Engineering From Fred
+  github: PatrickJHess/Volume-Four-Chapter-One
+  copyright: >-
+    2025 by the University of Virginia Darden School Foundation,
+    Charlottesville, VA.
+  authors:
+    - name: Financial Python
+
+
+#  exports:
+#    - format: pdf
+#      template: lapreprint-typst
+#      output: book.pdf      # The filename it creates
+#      id: my_pdf_export     # The "name" of this specific job
+
+  downloads:
+    - id: my_pdf_export     # ONLY USE THE ID HERE
+      title: Download PDF
+  toc:
+    - title: Introduction
+      file: intro.md
+    - title: Getting Started
+      children:
+        - title: Interacting With Jupyter Books
+          file: Interacting With Jupyter Books.md
+    - title: 'Chapter Two: Par Yields And The Term Structure Of Interest Rates'
+      children:
+        - title: Chapter Highlights
+          file: Chapter_One_Highlights.md
+        - title: Term Structure ⇄ Par Yields
+          file: Define_Par_Yields.md
+        - title: Par Yields and the Term Structure
+          file: notebooks/Calculating_Par_Yields.ipynb
+        - title: A Well-Balanced 🐴 + 🐰 Stew
+          file: notebooks/The_Term_Structure_From_Par_Yields.ipynb
+        - title: Chapter Summary
+          file: Chapter_Summary.md
+        - title: Imported Functions and FredReader
+          file: imported_functions.md
+    - title: Other Chapters Of The Volume
+      children:
+        - title: 'Chapter One: Accessing Data With API Keys-Getting Data From FRED'
+          url: https://patrickjhess.github.io/Volume-Four-Chapter-One/
+        - title: 'Chapters Three: Are Yields To Maturity Useful'
+          url: https://patrickjhess.github.io/Volume-Four-Chapter-Three/
+        - title: 'Chapters Four: Interest Rate Risk- Duration And Convesxity'
+          url: https://patrickjhess.github.io/Volume-Four-Chapter-Four/
+
+  jupyter:
+    binder:
+      repo: PatrickJHess/Volume-Three-Chapter-Four
+      ref: master
+ 
+site:
+  template: book-theme
+  options:
+    repository: https://github.com/PatrickJHess/Volume-Four-Chapter-One
+    style: static/custom.css
+    base_url: /Volume-Four-Chapter-One/
+    thebe: true  # This enables the engine
+    # The 'binder' block MUST be indented under 'options'
+    binder:
+      repo: PatrickJHess/Volume-Four-Chapter-One
+      ref: master
+      binderUrl: https://mybinder.org
+
+
+
+
+
+
+      
+
