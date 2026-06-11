@@ -1246,7 +1246,7 @@ def calc_par_yield(months_to_maturity, interim_estimates, sofr_rate=None, freq=6
     # 3. Safeguard against exactly 0 maturity (estimates the immediate curve intercept)
     months_to_maturity = max(months_to_maturity, 0.0001)
     
-    # 4. Generate schedule of relative months and accrual periods (tau)
+    # 4. Generate schedule of relative months and accrual periods (gamma)
     if months_to_maturity < freq:
         # Short end: allows fractional months and single payments
         payment_months = [months_to_maturity]
@@ -1261,7 +1261,6 @@ def calc_par_yield(months_to_maturity, interim_estimates, sofr_rate=None, freq=6
         if stub_months > 0:
             payment_months=[stub_months]+payment_months
             accrual_taus=[stub_months / 12.0]+accrual_taus            
-
 
     df = pd.DataFrame({
         'relative_months': payment_months,
@@ -1301,90 +1300,6 @@ def calc_par_yield(months_to_maturity, interim_estimates, sofr_rate=None, freq=6
     par_yield = (DF_start - DF_N) / PV01
     
     return par_yield
-  
-def calc_spot_par_yields(coeff, mat,start=None, freq=2, sofr_rate=None):
-    """
-    Calculates the annualized par yield for a given maturity using
-    Nelson-Siegel (or similar) spot rate curve coefficients.
-
-
-    This function determines the cash flow schedule, derives the corresponding
-    spot rates, calculates the discount factors (zero-coupon bond prices),
-    and applies the standard par yield formula. It supports both restricted
-    (anchored to a specific SOFR rate) and unrestricted curve models.
-
-
-    Args:
-        coeff (array-like): Coefficients for the spot rate curve model.
-            If len(coeff) == 4, the model is treated as unrestricted.
-            Otherwise, it uses the provided `sofr_rate` for restriction.
-        mat (float): Total maturity of the bond or swap in years.
-        start (datetime, optional): Start date of the bond or swap in years.
-            Defaults to None.
-        freq (int, optional): Number of compounding/payment periods per year.
-            Defaults to 2 (semi-annual payments).
-        sofr_rate (float, optional): The starting short rate (e.g., overnight SOFR)
-            used to restrict the short end of the curve. Defaults to None.
-
-
-    Returns:
-        float: The annualized par yield (expressed as a decimal).
-
-
-    Notes:
-        The par yield is calculated using the derived discount factors (zeros)
-
-
-    """
-    # unrestricked estimates, no sofr rate is None; restricted sofr_rate
-    rate = None if len(coeff) == 4 else sofr_rate
-
-
-    # total number of zero estimtes equal
-    num_periods = int(mat * freq)
-
-
-    # maturity one year
-    if num_periods >= 1:
-
-
-        # from one until before last payment
-        if start:
-          maturity =start + np.arange(1, num_periods) / freq
-        else:
-          maturity = np.arange(1, num_periods) / freq
-        # add the last payment date (maturity)
-        maturity = np.append(maturity, mat)
-
-
-    # single payment
-    else:
-      if start:
-        maturity = start+np.array([mat])
-      else:
-        maturity = np.array([mat])
-
-
-    # Get spot rates and ensure maturity is handled correctly
-    spot_rates, maturity = ns_spot_rates(coeff, maturity, sofr_rate=rate)
-
-
-    # Calculate zero-coupon bond prices (discount factors)
-    zeros = np.exp(-spot_rates * maturity)
-
-
-    # scale annualizes par yield
-    scale = 1 / maturity[-1] if maturity[-1] < 1 / freq else freq
-
-
-    # annualize and return par yield as a percentage
-
-
-    par_yield = (1 - zeros[-1]) / np.sum(zeros)*scale
-
-
-    return par_yield 
-
 ```
 :::
 
