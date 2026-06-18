@@ -8,17 +8,18 @@ A par yield defines the theoretical coupon rate required for a newly issued, def
 
 #### The Mathematics of the "Imaginary Bond"
 
-If we assume a par value of $1$ (or $100\%$), the price of our imaginary par bond is exactly $1$. The cash flows consist of regular coupon payments ($c$) multiplied by the accrual fraction ($\gamma_i$), plus the return of the principal at maturity ($N$).
-When you set the present value of those cash flows equal to $1$ using the economy's discount factors ($Z$), you get:
+If we assume a par value of $1$ (or $100\%$), the price of our imaginary par bond is exactly $1$. The cash flows consist of regular coupon payments ($c$) multiplied by the accrual fraction ($\gamma_i$), plus the return of the principal at maturity ($T$).
+When you set the present value of those cash flows equal to $1$ using the economy's discount factors ($PV$), you get:
 <br>
 
- $$1 = c \sum_{i=1}^{N} \gamma_i Z_i + Z_N$$
+ $$1 = c \sum_{i=1}^{T} \gamma_i PV(t) + PV(T)$$
 <br>
 
 What happens when you solve for c? a pure rearrangement of the present value factors:
 <br>
 
- $$c = \frac{1 - Z_N}{\sum_{i=1}^{N} \gamma_i Z_i}$$
+ $$c = \frac{1 - PV(T)}{\sum_{i=1}^{T} \gamma_i PV(t)}$$
+ 
 #### Why Build This Construct?
 
 Even though no real-world bond perfectly matches this curve , constructing this imaginary curve serves several purposes:

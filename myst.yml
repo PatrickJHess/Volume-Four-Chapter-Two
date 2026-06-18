@@ -4,7 +4,7 @@ project:
     "Par Yields, The Term Structure, FRED Data: Theory & Practice"
   abstract: |
     Par Yields from the Term Structure Reversed Engineering From Fred
-  github: PatrickJHess/Volume-Four-Chapter-One
+  github: PatrickJHess/Volume-Four-Chapter-Two
   copyright: >-
     2025 by the University of Virginia Darden School Foundation,
     Charlottesville, VA.
@@ -31,7 +31,7 @@ project:
     - title: 'Chapter Two: Par Yields And The Term Structure Of Interest Rates'
       children:
         - title: Chapter Highlights
-          file: Chapter_One_Highlights.md
+          file: Chapter_Two_Highlights.md
         - title: Term Structure ⇄ Par Yields
           file: Define_Par_Yields.md
         - title: Par Yields and the Term Structure
@@ -46,7 +46,7 @@ project:
       children:
         - title: 'Chapter One: Accessing Data With API Keys-Getting Data From FRED'
           url: https://patrickjhess.github.io/Volume-Four-Chapter-One/
-        - title: 'Chapters Three: Are Yields To Maturity Useful'
+        - title: 'Chapter Three: Yields To Maturity And The Term Structure Of Interest Rates'
           url: https://patrickjhess.github.io/Volume-Four-Chapter-Three/
         - title: 'Chapters Four: Interest Rate Risk- Duration And Convesxity'
           url: https://patrickjhess.github.io/Volume-Four-Chapter-Four/
