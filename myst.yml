@@ -53,19 +53,19 @@ project:
 
   jupyter:
     binder:
-      repo: PatrickJHess/Volume-Three-Chapter-Four
+      repo: PatrickJHess/Volume-Three-Chapter-Two
       ref: master
  
 site:
   template: book-theme
   options:
-    repository: https://github.com/PatrickJHess/Volume-Four-Chapter-One
+    repository: https://github.com/PatrickJHess/Volume-Four-Chapter-Two
     style: static/custom.css
-    base_url: /Volume-Four-Chapter-One/
+    base_url: /Volume-Four-Chapter-Two/
     thebe: true  # This enables the engine
     # The 'binder' block MUST be indented under 'options'
     binder:
-      repo: PatrickJHess/Volume-Four-Chapter-One
+      repo: PatrickJHess/Volume-Four-Chapter-Two
       ref: master
       binderUrl: https://mybinder.org
 
