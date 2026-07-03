@@ -1,5 +1,3 @@
-/* User Provided Stylesheet */
-
 /* 1. Base style for the arrow */
 a[target^="_blank_"]::after {
     content: "\2197"; 
