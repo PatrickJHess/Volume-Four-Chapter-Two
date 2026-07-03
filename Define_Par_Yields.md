@@ -1,9 +1,9 @@
-# Term Structure ⇄ Par Yields
+# ☝ Term Structure ⇄ Par Yields
 
-## Defining Par Yield
+## 🤔💭 Defining Par Yield
 The par yield is the exact coupon rate necessary for a bond's market price to equal its principal (or face) value.
 
-## The Par Yield Formula
+## 🔣 The Par Yield Formula
 We derive the par yield by starting with the standard present value equation for a bond. By setting the bond's total price equal to its principal, we get:
 
 <br>
@@ -23,7 +23,7 @@ $$\text{Par Yield}=\frac{1-PV(T)}{\sum _{t=1}^{T}\gamma_t\times PV(t)}$$
 
 In simple terms, the par yield is equal to one minus the present value factor at maturity ($\text{PV(T)}$) divided by the sum of the present value factors ($\gamma_t\times \text{PV(t)}$) for all payment dates. Remember that a present value factor is the price of a zero-coupon bond for a given maturity derived directly from prevailing spot rates.
 
-## Mechanics of the Par Yield Formula
+## ✖️➗➕➖ Mechanics of the Par Yield Formula
 Breaking down the mathematical components clarifies how par yields react to shifting interest rates and time horizons:
 
 * **The Numerator $1−PV(T)$**: This is the difference between the face value of 1 and the present value of that 1 received at maturity ($T$). This value grows larger as maturity extends or as interest rates climb.
@@ -38,7 +38,7 @@ Breaking down the mathematical components clarifies how par yields react to shif
 
 
 
-## Why Par Yields Matter
+## 💡🎯 Why Par Yields Matter
 
 * **For Issuers**: It signals the precise coupon rate required to price new debt at par, driving the initial calculation of borrowing costs.
 
@@ -46,7 +46,7 @@ Breaking down the mathematical components clarifies how par yields react to shif
 
 * **For Investors**: It provides a baseline periodic return measure to assess opportunities within the fixed-income market.
 
-## Illustrative Example:
+## 🔍Illustrative Example:
 
 Consider an example with a six-month and one-year annualized spot rate of 5%. The zero prices (or present value factors) are calculated as:
 
@@ -66,7 +66,7 @@ If we plug this 5.07% coupon rate back into the standard pricing equation for a 
 >$\$100=\$2.532\times 0.9753+\$102.532\times 0.9512$
 
 
-## Applying the Nelson-Siegel Model
+## 🔢 Applying the Nelson-Siegel Model
 Calculating an exact par yield requires a known term structure of interest rates. Because observable market data only provides discrete zero prices at specific intervals, we need a mathematical model to generate a continuous yield curve to price bonds at any arbitrary maturity.
 In the previous volume, we solved this by estimating a Nelson-Siegel model using FEDInvest data across 399 specific securities. We will now take those theoretical estimates and apply them practically using a three-step approach:
 
@@ -78,7 +78,7 @@ In the previous volume, we solved this by estimating a Nelson-Siegel model using
 This progression bridges the gap between theoretical modeling and real-world fixed-income trading.
 
 
-## Refresher: The Nelson-Siegel Parameters
+## Reminder‼️: The Nelson-Siegel Parameters
 The Nelson-Siegel model is powerful because it constructs the entire yield curve using a single equation governed by four interconnected parameters. The spot rate $r(t)$ for any maturity t is expressed as:
 
 <br>
