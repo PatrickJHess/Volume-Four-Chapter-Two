@@ -1,7 +1,7 @@
 version: 1
 project:
   title: >-
-    "Par Yields, The Term Structure, FRED Data: Theory & Practice"
+    "🏦💻 Par Yields, The Term Structure, FRED Data: Theory & Practice"
   abstract: |
     Par Yields from the Term Structure Reversed Engineering From Fred
   github: PatrickJHess/Volume-Four-Chapter-Two
@@ -30,15 +30,15 @@ project:
           file: Interacting With Jupyter Books.md
     - title: 'Chapter Two: Par Yields And The Term Structure Of Interest Rates'
       children:
-        - title: Chapter Highlights
+        - title: ✨ Chapter Highlights
           file: Chapter_Two_Highlights.md
-        - title: Term Structure ⇄ Par Yields
+        - title: ☝ Term Structure ⇄ Par Yields
           file: Define_Par_Yields.md
-        - title: Par Yields and the Term Structure
+        - title: ⚖️📈 Par Yields and the Term Structure
           file: notebooks/Calculating_Par_Yields.ipynb
         - title: A Well-Balanced 🐴 + 🐰 Stew
           file: notebooks/The_Term_Structure_From_Par_Yields.ipynb
-        - title: Chapter Summary
+        - title: 📝 Chapter Summary
           file: Chapter_Summary.md
         - title: Imported Functions and FredReader
           file: imported_functions.md

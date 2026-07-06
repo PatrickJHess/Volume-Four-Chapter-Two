@@ -2,7 +2,7 @@
 
 
 
-# Imported Functions and `FredReader`.
+# 📥 Imported Functions and `FredReader`.
 
 :::{dropdown} Click to see `FEDInvest`
 ```python
