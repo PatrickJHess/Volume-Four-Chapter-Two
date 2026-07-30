@@ -53,15 +53,6 @@ project:
 
 
  
-site:
-  template: book-theme
-  options:
-    style: shared_files_finpy/static/custom.css
-    base_url: /Volume-Four-Chapter-Two/
-    thebe: true  # This enables the engine
-    # The 'binder' block MUST be indented under 'options'
-    binder:
-      ref: master
 
 
   jupyter:
@@ -69,21 +60,19 @@ site:
       repo: PatrickJHess/Volume-Four-Chapter-Two
       ref: master
 
-#site:
-#  template: book-theme
-#  options:
-#    repository: https://github.com/PatrickJHess/Volume-Four-Chapter-Three
-#    style: shared_files_finpy/static/custom.css
-#    base_url: /Volume-Four-Chapter-Three/
-#    thebe: true  # This enables the engine
+
+site:
+  template: book-theme
+  options:
+    repository: https://github.com/PatrickJHess/Volume-Four-Chapter-Two
+    style: shared_files_finpy/static/custom.css
+    base_url: /Volume-Four-Chapter-Two/
+    thebe: true  # This enables the engine
     # The 'binder' block MUST be indented under 'options'
- #   binder:
-#      repo: PatrickJHess/Volume-Four-Chapter-Three
- #     ref: master
- #     binderUrl: https://mybinder.org
-
-
-
+    binder:
+      repo: PatrickJHess/Volume-Four-Chapter-Two
+      ref: master
+      binderUrl: https://mybinder.org
 
 
       
